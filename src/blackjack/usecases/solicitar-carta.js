@@ -5,6 +5,5 @@
  * @returns {String} retorna una carta del deck
  */
 export const pedirCarta = (deck) => {
-    if ( !deck || deck.length === 0) throw new Error('deck es obligatorio como un arreglo de string');
-    return deck.pop();
+    return ( !deck || deck.length === 0) ? (()=> { throw new Error('deck es obligatorio como un arreglo de string')}): deck.pop();
 }
